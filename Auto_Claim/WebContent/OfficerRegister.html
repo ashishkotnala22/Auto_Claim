@@ -10,13 +10,13 @@
 <h1>Officer Registration</h1>
 <form action="RegisterOfficer" method="post">
 <pre>
-Name   		 : <input type="text" placeholder="Enter your name" name="name" required><br><br>
-Mobile Number    : <input type="text" placeholder="Enter your mobile number" name="pNum" required><br><br>
-Password	 : <input type="password" placeholder="Enter your password" name="password" required><br><br>
-Email-Id	 : <input type="text" placeholder="Enter your email Id" name="email" required><br><br>
-Aadhaar Number   : <input type="text" placeholder="Enter the Aadhaar" name="Aadhaar" required><br><br>
+Name   		 : <input type="text" placeholder="Enter your name" oninvalid="alert('Name must contain atleast 5 characters'); name="name" pattern=".{5,}"  required><br><br>
+Mobile Number    : <input type="text" placeholder="Enter your mobile number" oninvalid="alert('Mobile no must contain 10 digits');  name="pNum" pattern="[0-9]{10}"  maxlength="10" required><br><br>
+Password	 : <input type="password" placeholder="Enter your password" oninvalid="alert('Password must contain alphanumeric characters'); name="password" pattern="[A-Za-z0-9._@#&-]*" required><br><br>
+Email-Id	 : <input type="text" placeholder="Enter your email Id" oninvalid="alert('Email id must contain 12 character'); name="email" pattern=".{3,}" required><br><br>
+Aadhaar Number   : <input type="text" placeholder="Enter the Aadhaar" oninvalid="alert('Aadhaar no must be of 12 digit'); name="Aadhaar" pattern="[0-9]{12}" maxlength="12" required><br><br>
 
-Confirm Password : <input type="password" placeholder="Enter your password" name="cnf" required><br><br>
+Confirm Password : <input type="password" placeholder="Enter your password" oninvalid="alert('Password must contain alphanumeric characters'); name="cnf" pattern="[A-Za-z0-9._@#&-]*" required><br><br>
 
 <input type="submit" value="Register">
 </pre>

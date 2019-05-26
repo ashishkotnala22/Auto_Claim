@@ -93,7 +93,7 @@ a {
 </head>
 <body>
 
-<form  action="CheckEntry" name="loginForm" onsubmit="return validation()" method="post">
+<form  action="Register" name="loginForm" onsubmit="return validation()" method="post">
   <div class="imgcontainer">
     <img src="https://www.royalsundaram.in/blog/wp-content/uploads/2017/10/Personal-accident-cover-in-car-insurance-explained.jpg" alt="Avatar" class="avatar">
   </div>
@@ -103,26 +103,26 @@ a {
     <hr>
 
     <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" required>
+    <input type="text" placeholder="Enter Name" oninvalid="alert('Name must contain atleast 5 characters'); name="name" pattern=".{5,}" required>
 
     <label for="phoneno"><b>Phone No</b></label>
-    <input type="text" placeholder="Enter Phone No" name="pNum"   maxlength="10" required>
+    <input type="text" placeholder="Enter Phone No" oninvalid="alert('Mobile no must contain 10 digits'); name="pNum" pattern="[0-9]{10}"  maxlength="10" required>
 
     <label for="address"><b>Address</b></label>
-    <input type="text" placeholder="Enter Address" name="address" required>
+    <input type="text" placeholder="Enter Address" oninvalid="alert('Address can contain only alpha numeric'); name="address" pattern="[a-zA-Z0-9]*" required>
     
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" oninvalid="alert('Email id must contain 12 character'); name="email" pattern=".{3,}" required>
     
     <label for="Aadhaar no"><b>Aadhaar No</b></label>
-    <input type="text" placeholder="Enter Aadhaar No" name="Aadhaar"  maxlength="12" required>
+    <input type="text" placeholder="Enter Aadhaar No" oninvalid="alert('Aadhaar no must be of 12 digit'); name="Aadhaar" pattern="[0-9]{12}" maxlength="12" required>
     
     <label for="vehicle no"><b>Vehicle No</b></label>
-    <input type="text" placeholder="Enter Vehicle No" name="vehicle no" required>
+    <input type="text" placeholder="Enter Vehicle No" oninvalid="alert('Vehicle no must be of 8 digit'); name="vehicle no" pattern="[0-9]{8}" required>
     
     
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter password" name="pass" required>
+    <input type="password" placeholder="Enter password" oninvalid="alert('Password must contain alphanumeric characters'); name="pass" pattern="[A-Za-z0-9._@#&-]*"required>
     <hr>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 

@@ -30,6 +30,9 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String Email=request.getParameter("email");
 		String password=request.getParameter("pass");
+		
+		
+		
 		if(validate.checkUser(Email, password))
 			{
 			RequestDispatcher rd= request.getRequestDispatcher("successlogin.html");
@@ -41,6 +44,10 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher rd= request.getRequestDispatcher("unsuccessfullogin.html");
 	        rd.forward(request, response);
 	}
+		
+		
+		
+		
 	}
 
 }
