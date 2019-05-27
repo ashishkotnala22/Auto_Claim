@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.cts.DAO.DBUtil;
 import com.cts.DAO.validate;
@@ -30,13 +31,18 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String Email=request.getParameter("email");
 		String password=request.getParameter("pass");
-		
-		
+		String Name=request.getParameter("name");
 		
 		if(validate.checkUser(Email, password))
 			{
+			
+			
+			 HttpSession session=request.getSession();  
+		        session.setAttribute("name",Name);  
 			RequestDispatcher rd= request.getRequestDispatcher("successlogin.html");
 		    rd.forward(request, response);
+		   
+		    
 			}
 		else
 		{
