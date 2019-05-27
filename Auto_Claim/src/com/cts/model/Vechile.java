@@ -1,6 +1,6 @@
 package com.cts.model;
 
-import java.util.Date;
+
 
 public class Vechile {
 
@@ -70,7 +70,7 @@ public class Vechile {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	
 	
 	

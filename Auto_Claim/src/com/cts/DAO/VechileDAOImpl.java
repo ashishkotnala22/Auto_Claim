@@ -29,7 +29,7 @@ public class VechileDAOImpl implements  VechileDAO// implements VechileDAO{
 		 boolean status=false;
 		 
 		 String name=veh.getName();
-		 Long mNumber=veh.getpNUmber();
+		 long mNumber=veh.getpNUmber();
 		 String address=veh.getAddress();
 		 String email=veh.getEmail();
 		 long aadharNumber=veh.getAadharNo();
