@@ -1,6 +1,9 @@
 package com.cts.servlet;
 
 import java.io.IOException;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,7 +46,8 @@ String name=req.getParameter("name");
 	
 		
 		
-		
+		RequestDispatcher rd=req.getRequestDispatcher("claimsettle.html");
+		rd.forward(req, res);
 		
 		
 		

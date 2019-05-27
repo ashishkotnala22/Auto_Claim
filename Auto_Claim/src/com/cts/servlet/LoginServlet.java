@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 			}
 		else
 		{
-			System.out.println("Invalid credentials");
+			
 			RequestDispatcher rd= request.getRequestDispatcher("unsuccessfullogin.html");
 	        rd.forward(request, response);
 	}
