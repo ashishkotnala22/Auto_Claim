@@ -34,7 +34,7 @@ public class ForwardToSettlement extends HttpServlet {
 		double depreciation=value*(.1*years);
 		double finalReturn=value-depreciation;
 		PrintWriter pw=response.getWriter();
-		pw.write("you are entitled for amount "+finalReturn);
+		pw.write("you are entitled for amount Rs. "+finalReturn);
 		
 		 }
 		 
